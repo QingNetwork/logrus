@@ -13,7 +13,7 @@ type PlainFormatter struct {
 }
 
 func (f *PlainFormatter) Format(entry *logrus.Entry) ([]byte, error) {
-	return []byte(fmt.Sprintf("%s %s %s\n", f.LevelDesc[entry.Level], entry.Time.Format(f.TimestampFormat), entry.Message)), nil
+	return []byte(fmt.Sprintf("%s %s %s\n", entry.Time.Format(f.TimestampFormat), f.LevelDesc[entry.Level], entry.Message)), nil
 }
 
 var defaultFormatter = &PlainFormatter{
