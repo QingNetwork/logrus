@@ -1,4 +1,4 @@
-module github.com/mritd/logrus
+module github.com/TPClash/logrus
 
 go 1.20
 
